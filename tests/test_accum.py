@@ -1,7 +1,7 @@
 import pytest
 from stuff.accum import Accumulator
 
-def test_accummulator_init():
+def test_accumulator_init():
     accum = Accumulator()
     assert accum.count == 0
 
@@ -15,7 +15,7 @@ def test_accumulator_add_three():
     accum.add(3)
     assert accum.count == 3
 
-def test_accuulator_add_twice():
+def test_accumulator_add_twice():
     accum = Accumulator
     accum.add()
     accum.add()
