@@ -1,15 +1,18 @@
 ######## Imports ########
 import pytest
 
+@pytest.mark.math
 def test_one_plus_one():
     assert 1 + 1 == 2
 
+@pytest.mark.math
 def test_one_plus_two():
     a = 1
     b = 2
     c = 3
     assert a + b == c
 
+@pytest.mark.math
 def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError) as e:
         num = 1 / 0
@@ -32,6 +35,7 @@ products = [
     (2.5, 6.7, 16.75)
 ]
 
+@pytest.mark.math
 @pytest.mark.parametrize('a, b, product', products)
 def test_multiplication(a, b, product):
     assert a * b == product
